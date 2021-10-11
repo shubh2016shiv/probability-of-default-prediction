@@ -431,7 +431,7 @@ if st.checkbox("Initiate data clean pipeline") and data is not None:
                 st.write(preprocessedTestData)
 
             st.success(
-                "Data Pre-Processing Completed! Now, this processed data can be trained using ML algorithms or prediction for Probability of Default can be performed directly using already trained Gradient Boosting Machine")
+                "Data Pre-Processing Completed! Now, Machine Learning Classifier model can be trained using this processed data or Probability of Default can be predicted directly using already trained Gradient Boosting Machine.")
 else:
     st.error("Download the data, Upload it and run pre-processing pipelines step by step!")
 
@@ -442,7 +442,7 @@ model = st.sidebar.selectbox("Choose Classification Model", (
 st.write("-----")
 st.header("ML Model Playground: " + model)
 st.info(
-    "Select Machine Learning Algorithms from Sidebar to train data, perform the hyper tuning optimization and evaluate the prediction for given hyper-parameters of each Ml Model")
+    "Select Machine Learning Algorithms from Sidebar to train data, perform the hyper tuning optimization and evaluate the prediction for given set of hyper-parameters of each ML Model")
 if isDataPreProcessed:
     if model == "Logistic Regression":
         st.subheader("Select Hyper Parameters")
